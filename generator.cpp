@@ -1,5 +1,5 @@
 #include "inc/Generate.hpp"
-#include "inc/Arrays.h"
+#include "inc/Arrays.hpp"
 
 string GenRandText(int SizeText)
 {

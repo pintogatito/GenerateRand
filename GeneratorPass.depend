@@ -14,3 +14,18 @@
 
 1675374579 c:\users\pinto\documentos\codeblocks\generatorpass\inc\arrays.h
 
+1675374757 source:c:\users\pinto\documentos\codeblocks\generaterand\generator.cpp
+	"inc/Generate.hpp"
+	"inc/Arrays.h"
+
+1675372918 c:\users\pinto\documentos\codeblocks\generaterand\inc\generate.hpp
+	<iostream>
+
+1675374579 c:\users\pinto\documentos\codeblocks\generaterand\inc\arrays.h
+
+1675374858 source:c:\users\pinto\documentos\codeblocks\generaterand\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"inc/Generate.hpp"
+
