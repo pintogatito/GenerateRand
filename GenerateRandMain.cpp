@@ -10,7 +10,7 @@
 #include "GenerateRandMain.h"
 #include <wx/msgdlg.h>
 #include <fstream>
-#include "inc/Generator.hpp"
+#include "inc/GeneratorManager.hpp"
 
 //(*InternalHeaders(GenerateRandFrame)
 #include <wx/intl.h>
@@ -50,6 +50,9 @@ const long GenerateRandFrame::ID_STATICTEXT2 = wxNewId();
 const long GenerateRandFrame::ID_STATICTEXT3 = wxNewId();
 const long GenerateRandFrame::ID_TEXTCTRL1 = wxNewId();
 const long GenerateRandFrame::ID_TEXTCTRL2 = wxNewId();
+const long GenerateRandFrame::ID_TEXTCTRL3 = wxNewId();
+const long GenerateRandFrame::ID_STATICTEXT4 = wxNewId();
+const long GenerateRandFrame::ID_STATICTEXT5 = wxNewId();
 const long GenerateRandFrame::idMenuQuit = wxNewId();
 const long GenerateRandFrame::idMenuAbout = wxNewId();
 const long GenerateRandFrame::ID_STATUSBAR1 = wxNewId();
@@ -71,12 +74,15 @@ GenerateRandFrame::GenerateRandFrame(wxWindow* parent,wxWindowID id)
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     SetClientSize(wxSize(800,600));
-    ToggleButton1 = new wxToggleButton(this, ID_TOGGLEBUTTON1, _("Generar"), wxPoint(336,256), wxDefaultSize, 0, wxDefaultValidator, _T("ID_TOGGLEBUTTON1"));
+    ToggleButton1 = new wxToggleButton(this, ID_TOGGLEBUTTON1, _("Generar"), wxPoint(352,304), wxDefaultSize, 0, wxDefaultValidator, _T("ID_TOGGLEBUTTON1"));
     StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Generador de texto"), wxPoint(320,80), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("Cantidad de caracteres por linea"), wxPoint(128,128), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _("Cantidad de lineas:"), wxPoint(200,176), wxDefaultSize, 0, _T("ID_STATICTEXT3"));
-    TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxPoint(320,120), wxSize(144,23), 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
-    TextCtrl2 = new wxTextCtrl(this, ID_TEXTCTRL2, wxEmptyString, wxPoint(320,176), wxSize(144,23), 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
+    TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxPoint(320,120), wxSize(200,23), 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+    TextCtrl2 = new wxTextCtrl(this, ID_TEXTCTRL2, wxEmptyString, wxPoint(320,176), wxSize(200,23), 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
+    TextCtrl3 = new wxTextCtrl(this, ID_TEXTCTRL3, wxEmptyString, wxPoint(320,224), wxSize(200,23), 0, wxDefaultValidator, _T("ID_TEXTCTRL3"));
+    StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _("Ingresa el nombre del archivo donde se va a guradar:"), wxPoint(32,224), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+    StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _(".txt"), wxPoint(528,232), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
@@ -119,16 +125,15 @@ void GenerateRandFrame::OnAbout(wxCommandEvent& event)
 
 void GenerateRandFrame::OnToggleButton1Toggle(wxCommandEvent& event)
 {
-    Generator g;
-    string text;
+    GeneratorManager g;
+    string file;
     int SizeText,NumLines;
     TextCtrl1->GetValue().ToInt(&SizeText);
     TextCtrl2->GetValue().ToInt(&NumLines);
+    file = TextCtrl3->GetValue().ToStdString();
 
-    ofstream fich("cadena.txt");
-    for (int i = 0; i < NumLines; ++i)
+    if(!g.GenText(SizeText,NumLines,file))
     {
-        text = g.GenRandText(SizeText);
-        fich << text << endl;
+        wxMessageBox("Error opening file");
     }
 }

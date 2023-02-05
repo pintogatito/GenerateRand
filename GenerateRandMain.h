@@ -41,6 +41,9 @@ class GenerateRandFrame: public wxFrame
         static const long ID_STATICTEXT3;
         static const long ID_TEXTCTRL1;
         static const long ID_TEXTCTRL2;
+        static const long ID_TEXTCTRL3;
+        static const long ID_STATICTEXT4;
+        static const long ID_STATICTEXT5;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
@@ -50,9 +53,12 @@ class GenerateRandFrame: public wxFrame
         wxStaticText* StaticText1;
         wxStaticText* StaticText2;
         wxStaticText* StaticText3;
+        wxStaticText* StaticText4;
+        wxStaticText* StaticText5;
         wxStatusBar* StatusBar1;
         wxTextCtrl* TextCtrl1;
         wxTextCtrl* TextCtrl2;
+        wxTextCtrl* TextCtrl3;
         wxToggleButton* ToggleButton1;
         //*)
 

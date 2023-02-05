@@ -27,11 +27,11 @@ string Generator::GenRandText(int SizeText)
         {
         case 0:
             Rand_Index = rand() % 24;
-            text += to_string(lowCase.at(Rand_Index));
+            text += lowCase.at(Rand_Index);
             break;
         case 1:
             Rand_Index = rand() % 24;
-            text += to_string(uppCase.at(Rand_Index));
+            text += uppCase.at(Rand_Index);
             break;
         case 2:
             Rand_Index = rand() % 9;
@@ -45,9 +45,6 @@ string Generator::GenRandText(int SizeText)
             j--;
         }
     }
-
     return text;
 }
-
-
 #endif // GENERATOR_HPP_INCLUDED

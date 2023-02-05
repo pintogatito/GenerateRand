@@ -1509,7 +1509,7 @@
 1654550624 c:\wxwidgets-3.1.7\include\wx\univ\theme.h
 	"wx/string.h"
 
-1675620621 c:\users\pinto\documents\codeblocks\generaterand\generaterandmain.h
+1675627830 c:\users\pinto\documents\codeblocks\generaterand\generaterandmain.h
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/stattext.h>
@@ -1832,4 +1832,84 @@
 	"wx/textctrl.h"
 
 1654550624 c:\wxwidgets-3.1.7\include\wx\qt\textctrl.h
+
+1675629165 source:c:\users\pinto\documents\codeblocks\generaterand\generaterandmain.cpp
+	"GenerateRandMain.h"
+	<wx/msgdlg.h>
+	<fstream>
+	"inc/Generator.hpp"
+	<wx/intl.h>
+	<wx/string.h>
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\msgdlg.h
+	"wx/defs.h"
+	"wx/dialog.h"
+	"wx/stockitem.h"
+	"wx/generic/msgdlgg.h"
+	"wx/msw/msgdlg.h"
+	"wx/motif/msgdlg.h"
+	"wx/gtk/msgdlg.h"
+	"wx/osx/msgdlg.h"
+	"wx/qt/msgdlg.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\dialog.h
+	"wx/toplevel.h"
+	"wx/containr.h"
+	"wx/sharedptr.h"
+	"wx/univ/dialog.h"
+	"wx/msw/dialog.h"
+	"wx/motif/dialog.h"
+	"wx/gtk/dialog.h"
+	"wx/gtk1/dialog.h"
+	"wx/osx/dialog.h"
+	"wx/qt/dialog.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\sharedptr.h
+	"wx/defs.h"
+	"wx/atomic.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\atomic.h
+	"wx/defs.h"
+	"wx/msw/wrapwin.h"
+	"libkern/OSAtomic.h"
+	<atomic.h>
+	"wx/thread.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\univ\dialog.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\msw\dialog.h
+	"wx/panel.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\motif\dialog.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\gtk\dialog.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\gtk1\dialog.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\osx\dialog.h
+	"wx/panel.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\qt\dialog.h
+	"wx/dialog.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\stockitem.h
+	"wx/defs.h"
+	"wx/chartype.h"
+	"wx/string.h"
+	"wx/accel.h"
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\generic\msgdlgg.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\msw\msgdlg.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\motif\msgdlg.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\gtk\msgdlg.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\osx\msgdlg.h
+
+1654550624 c:\wxwidgets-3.1.7\include\wx\qt\msgdlg.h
+	"wx/msgdlg.h"
+
+1675629329 c:\users\pinto\documents\codeblocks\generaterand\inc\generator.hpp
 
